@@ -1,4 +1,5 @@
 import Body from "./components/Body";
+import "./css/main.css"
 
 function App() {
   return (

@@ -2,7 +2,9 @@ import React from 'react'
 
 function Body() {
   return (
-    <div>Body</div>
+    <div className='body-css'>
+      <h1>body</h1>
+    </div>
   )
 }
 

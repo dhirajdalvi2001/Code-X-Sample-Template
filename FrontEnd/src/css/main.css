@@ -1,0 +1,16 @@
+body {
+  background-color: #272727;
+}
+
+.body-css {
+  margin: 6vh 0 0 3vw;
+  background-color: #ccc;
+  color: #272727;
+  width: auto;
+  height: 93vh;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  border-radius: 12px 0 0 0;
+  overflow: hidden;
+}/*# sourceMappingURL=main.css.map */
