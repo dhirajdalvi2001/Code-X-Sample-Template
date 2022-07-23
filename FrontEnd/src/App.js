@@ -8,8 +8,8 @@ export const loginContext = createContext();
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  function changeLogin(e) {
-    setIsLoggedIn(e);
+  function changeLogin() {
+    setIsLoggedIn(true);
   }
   return (
     <div>

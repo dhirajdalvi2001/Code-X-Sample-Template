@@ -14,7 +14,58 @@ body {
   color: #aaa;
 }
 
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+  color: #aaa;
+  background-color: #373737;
+  border-radius: 8px;
+}
+.login h1 {
+  margin: 20px 0;
+}
+.login .login_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 300px;
+}
+.login .login_form input {
+  margin: 20px 0 20px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #272727;
+  border-radius: 8px;
+  background-color: #272727;
+  text-indent: 24px;
+  font-weight: 700;
+  outline: none;
+}
+.login .login_button {
+  margin: 20px 0 20px;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #272727;
+  border-radius: 8px;
+  background-color: #ccc;
+  font-weight: 700;
+  cursor: pointer;
+}
+.login .login_button:hover {
+  background-color: #272727;
+  color: #ccc;
+  transition: 0.3s all;
+}
+
 .body-css {
+  display: flex;
   margin: 0 0 0 3vw;
   background-color: #373737;
   color: #aaa;
@@ -25,14 +76,13 @@ body {
   max-height: max-content;
   border-radius: 12px 0 0 0;
   overflow: hidden;
-  display: flex;
+  font-weight: 500;
 }
 
 .recent-contacts {
+  display: flex;
   width: 20vw;
   border: 1px solid #272727;
-  display: flex;
-  flex-direction: column;
 }
 .recent-contacts .recent-contacts_search-box {
   margin: 10px auto;
@@ -41,7 +91,7 @@ body {
   outline: none;
   background-color: #aaa;
   border: 1px solid #272727;
-  border-radius: 6px;
+  border-radius: 8px;
   text-indent: 24px;
 }
 .recent-contacts .recent-contacts_search-logo {

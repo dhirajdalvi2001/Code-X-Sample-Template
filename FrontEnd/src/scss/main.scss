@@ -1,6 +1,17 @@
 @import './globals';
 @import './variables';
 
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name)
+};
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+};
+
 body {
     background-color: $dark;
 }
@@ -8,36 +19,83 @@ body {
 .navbar {
     margin: 0 0 0 3vw;
     height: 6vh;
-    color: $light;
+    color: $text-color;
+}
+
+.login {
+    @include flexCenter(column);
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+    color: $text-color;
+    background-color: $light-dark;
+    border-radius: $border-radius;
+
+    h1 {
+        margin: 20px 0;
+    }
+
+    #{&}_form {
+        @include flexCenter(column);
+        margin: 0 auto;
+        width: 300px;
+        input {
+            margin: 20px 0 20px;
+            width: 100%;
+            height: 50px;
+            border: $border;
+            border-radius: $border-radius;
+            background-color: $dark;
+            text-indent: $text-indent;
+            font-weight: weight(bold);
+            outline: none;
+        }
+    }
+
+    #{&}_button {
+        margin: 20px 0 20px;
+        width: 200px;
+        height: 40px;
+        border: $border;
+        border-radius: $border-radius;
+        background-color: $light;
+        font-weight: weight(bold);
+        cursor: pointer;
+        &:hover {
+            background-color: $dark;
+            color: $light;
+            transition: 0.3s all;
+        }
+    }
 }
 
 .body-css {
+    display: flex;
     margin: 0 0 0 3vw;
     background-color: $light-dark;
-    color: $light;
+    color: $text-color;
     width: auto;
     height: 93vh;
     max-height: max-content;
     border-radius: 12px 0 0 0;
     overflow: hidden;
-    display: flex;
+    font-weight: weight(medium);
 }
 
 .recent-contacts {
+    display: flex;
     width: 20vw;
     border: $border;
-    display: flex;
-    flex-direction: column;
 
     #{&}_search-box {
         margin: 10px auto;
         height: 30px;
         width: 90%;
         outline: none;
-        background-color: $light;
+        background-color: $text-color;
         border: $border;
-        border-radius: 6px;
-        text-indent: 24px;
+        border-radius: $border-radius;
+        text-indent: $text-indent;
     }
 
     #{&}_search-logo {
