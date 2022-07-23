@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import RecentContacts from './RecentContacts';
+import ChatBox from './ChatBox';
+import OnlineContacts from './OnlineContacts';
 
 function Body() {
   return (
     <div className='body-css'>
-      <h1>body</h1>
+      <RecentContacts />
+      <ChatBox />
+      <OnlineContacts />
     </div>
   )
 }

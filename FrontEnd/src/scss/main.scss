@@ -1,0 +1,58 @@
+@import './globals';
+@import './variables';
+
+body {
+    background-color: $dark;
+}
+
+.navbar {
+    margin: 0 0 0 3vw;
+    height: 6vh;
+    color: $light;
+}
+
+.body-css {
+    margin: 0 0 0 3vw;
+    background-color: $light-dark;
+    color: $light;
+    width: auto;
+    height: 93vh;
+    max-height: max-content;
+    border-radius: 12px 0 0 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.recent-contacts {
+    width: 20vw;
+    border: $border;
+    display: flex;
+    flex-direction: column;
+
+    #{&}_search-box {
+        margin: 10px auto;
+        height: 30px;
+        width: 90%;
+        outline: none;
+        background-color: $light;
+        border: $border;
+        border-radius: 6px;
+        text-indent: 24px;
+    }
+
+    #{&}_search-logo {
+        position: absolute;
+        margin: 16px 0 0 20px;
+        color: $dark;
+    }
+}
+
+.chat-box {
+    width: 70vw;
+    border: $border;
+}
+
+.online-contacts {
+    width: 10vw;
+    border: $border;
+}
