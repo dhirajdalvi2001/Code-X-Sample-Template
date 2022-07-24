@@ -1,12 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Body from './components/Body';
+import My404Component from './components/My404Component';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import Login from './components/Login';
+import Navbar from './components/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route exact path="/" element={
+          <div>
+            <Navbar />
+            <Body />
+          </div>
+        } />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<My404Component />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

@@ -45,6 +45,7 @@ body {
   border-radius: 8px;
   background-color: #272727;
   text-indent: 24px;
+  caret-color: #ccc;
   font-weight: 700;
   outline: none;
 }
@@ -60,6 +61,20 @@ body {
 }
 .login .login_button:hover {
   background-color: #272727;
+  color: #ccc;
+  transition: 0.3s all;
+}
+.login .login_h3 {
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #272727;
+}
+.login .login_link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.login .login_link:hover {
   color: #ccc;
   transition: 0.3s all;
 }
@@ -93,6 +108,7 @@ body {
   border: 1px solid #272727;
   border-radius: 8px;
   text-indent: 24px;
+  caret-color: #272727;
 }
 .recent-contacts .recent-contacts_search-logo {
   position: absolute;
@@ -108,4 +124,24 @@ body {
 .online-contacts {
   width: 10vw;
   border: 1px solid #272727;
+}
+
+.My404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 200px auto;
+  color: #ccc;
+  font-size: 20px;
+  font-weight: 700;
+}
+.My404 .My404_LinkTo {
+  margin: 50px auto;
+  text-decoration: underline;
+  color: #ccc;
+}
+.My404 .My404_LinkTo:hover {
+  color: #373737;
+  transition: 0.3s all;
 }/*# sourceMappingURL=main.css.map */
