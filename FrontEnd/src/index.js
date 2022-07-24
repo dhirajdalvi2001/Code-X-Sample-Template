@@ -19,10 +19,7 @@ root.render(
     <Router>
       <Routes>
         <Route exact path="/" element={
-          <div>
-            <Navbar />
-            <Body />
-          </div>
+          <App />
         } />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<My404Component />} />

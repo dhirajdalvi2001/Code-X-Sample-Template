@@ -14,14 +14,14 @@ import {
 export const loginContext = createContext();
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   function changeLogin() {
     setIsLoggedIn(true);
   }
   return (
     <div>
       <loginContext.Provider value={{ isLoggedIn, changeLogin }}>
-        {isLoggedIn ? <Navigate to="/" /> : <Navigate to="/login" /> }
+        {isLoggedIn ? <Body /> : <Navigate to="/login" /> }
       </loginContext.Provider>
     </div>
   );
