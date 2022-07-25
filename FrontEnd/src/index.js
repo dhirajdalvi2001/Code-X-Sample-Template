@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Login from './components/Login';
 import Navbar from './components/Navbar';
+import SignUp from './components/SignUp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
           <App />
         } />
         <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="*" element={<My404Component />} />
       </Routes>
     </Router>
