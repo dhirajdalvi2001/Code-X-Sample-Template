@@ -10,7 +10,7 @@ function SignUp() {
             <input type='email' placeholder='Email Address' name='email' autoComplete='off' />
             <input type='password' placeholder='Password' name='password' autoComplete='off' />
             <input type='password' placeholder='Confirm Password' name='cpassword' autoComplete='off' />
-            <button className='login_button'>Login</button>
+            <button className='login_button'>Sign Up</button>
             <h3 className='login_h3'>Already have an account? <Link to="/login" className='login_link'>Click Here</Link></h3>
         </form>
     </div>

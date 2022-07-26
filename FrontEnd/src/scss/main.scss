@@ -46,9 +46,10 @@ body {
             border: $border;
             border-radius: $border-radius;
             background-color: $dark;
+            color: $light;
             text-indent: $text-indent;
             caret-color: $light;
-            font-weight: weight(bold);
+            font-weight: weight(medium);
             outline: none;
         }
     }
@@ -86,8 +87,9 @@ body {
     }
 }
 
-.body-css {
+.body {
     display: flex;
+    flex-direction: column;
     margin: 0 0 0 3vw;
     background-color: $light-dark;
     color: $text-color;
@@ -97,6 +99,51 @@ body {
     border-radius: 12px 0 0 0;
     overflow: hidden;
     font-weight: weight(medium);
+
+    #{&}_navbar {
+        display: flex;
+        height: 50px;
+        background-color: lighten($light-dark, 4%);
+    }
+
+    #{&}_navbar_left {
+        width: 20vw;
+        border: $border;
+    }
+
+    #{&}_navbar_middle {
+        width: 70vw;
+        border: $border;
+    }
+
+    #{&}_navbar_right {
+        width: 10vw;
+        border: $border;
+    }
+
+    #{&}_container {
+        display: flex;
+        height: 100%;
+    }
+
+    #{&}_navbar_search-logo {
+        position: absolute;
+        margin: 16px 0 0 20px;
+        color: $dark;
+    }
+
+    #{&}_navbar_search-box {
+        display: flex;
+        margin: 10px auto;
+        height: 30px;
+        width: 90%;
+        outline: none;
+        background-color: $text-color;
+        border: $border;
+        border-radius: $border-radius;
+        text-indent: $text-indent;
+        caret-color: $dark;
+    }
 }
 
 .recent-contacts {

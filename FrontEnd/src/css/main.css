@@ -44,9 +44,10 @@ body {
   border: 1px solid #272727;
   border-radius: 8px;
   background-color: #272727;
+  color: #ccc;
   text-indent: 24px;
   caret-color: #ccc;
-  font-weight: 700;
+  font-weight: 500;
   outline: none;
 }
 .login .login_button {
@@ -79,8 +80,9 @@ body {
   transition: 0.3s all;
 }
 
-.body-css {
+.body {
   display: flex;
+  flex-direction: column;
   margin: 0 0 0 3vw;
   background-color: #373737;
   color: #aaa;
@@ -92,6 +94,44 @@ body {
   border-radius: 12px 0 0 0;
   overflow: hidden;
   font-weight: 500;
+}
+.body .body_navbar {
+  display: flex;
+  height: 50px;
+  background-color: #414141;
+}
+.body .body_navbar_left {
+  width: 20vw;
+  border: 1px solid #272727;
+}
+.body .body_navbar_middle {
+  width: 70vw;
+  border: 1px solid #272727;
+}
+.body .body_navbar_right {
+  width: 10vw;
+  border: 1px solid #272727;
+}
+.body .body_container {
+  display: flex;
+  height: 100%;
+}
+.body .body_navbar_search-logo {
+  position: absolute;
+  margin: 16px 0 0 20px;
+  color: #272727;
+}
+.body .body_navbar_search-box {
+  display: flex;
+  margin: 10px auto;
+  height: 30px;
+  width: 90%;
+  outline: none;
+  background-color: #aaa;
+  border: 1px solid #272727;
+  border-radius: 8px;
+  text-indent: 24px;
+  caret-color: #272727;
 }
 
 .recent-contacts {
