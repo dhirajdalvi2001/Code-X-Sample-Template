@@ -10,4 +10,4 @@ function My404Component() {
   )
 }
 
-export default My404Component
+export default My404Component;

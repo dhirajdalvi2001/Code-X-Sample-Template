@@ -1,15 +1,7 @@
 import { createContext, useState } from "react";
 import Body from "./components/Body";
-import Login from "./components/Login";
-import Navbar from "./components/Navbar";
-import "./css/main.css"
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  Navigate
-} from "react-router-dom";
+import "./css/main.css";
+
 
 export const loginContext = createContext();
 
@@ -21,7 +13,7 @@ function App() {
   return (
     <div>
       <loginContext.Provider value={{ isLoggedIn, changeLogin }}>
-        {isLoggedIn ? <Body /> : <Navigate to="/login" /> }
+        <Body />
       </loginContext.Provider>
     </div>
   );

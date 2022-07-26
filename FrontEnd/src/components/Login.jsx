@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginContext } from '../App';
 import UseForm from './UseForm';
@@ -10,7 +10,6 @@ function Login() {
     Validate
   );
   let logInValue = useContext(loginContext);
-  let navigateTo = useNavigate();
 
   function handleKeyPress(e) {
     if (e.keyCode === 13) {
@@ -18,25 +17,17 @@ function Login() {
     }
   }
   async function submit() {
-    if (errors !== null) {
-      console.log("Errors not null");
-      console.log(errors);
-      // navigateTo("/");
-      return;
-    } else {
-      console.log("Errors are null");
-      logInValue.changeLogin(true);
-      console.log(logInValue.isLoggedIn);
-      navigateTo("/");
-    }
+    logInValue.changeLogin(true);
     console.log("Submitted Successfully");
   }
   return (
     <div className='login'>
         <h1>Login to continue</h1>
-        <form className='login_form' onKeyPress={handleKeyPress} onSubmit={(e) => handleSubmit(e, false)}>
+        <form className='login_form' onKeyPress={handleKeyPress} onSubmit={(e) => handleSubmit(e, false)} noValidate >
             <input type='text' placeholder='Username' name='username' value={values.username} onChange={handleChange} autoComplete='off' />
+            {errors.username && <h6>{errors.username}</h6>}
             <input type='password' placeholder='Password' name='password' value={values.password} onChange={handleChange} autoComplete='off' />
+            {errors.password && <h6>{errors.password}</h6>}
             <button className='login_button'>Login</button>
             <h3 className='login_h3'>New here? <Link to="/sign-up" className='login_link'>Create a new account</Link></h3>
         </form>
@@ -44,4 +35,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login;
