@@ -1,5 +1,8 @@
 import { createContext, useState } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import Body from "./components/Body";
+import Login from "./components/Login";
+import RouteS from "./components/RouteS";
 import "./css/main.css";
 
 
@@ -13,7 +16,9 @@ function App() {
   return (
     <div>
       <loginContext.Provider value={{ isLoggedIn, changeLogin }}>
-        <Body />
+      <BrowserRouter>
+        <RouteS />
+      </BrowserRouter>
       </loginContext.Provider>
     </div>
   );
