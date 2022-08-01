@@ -1,23 +1,25 @@
-import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { loginContext } from '../App';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import UseForm from './UseForm';
 import Validate from './Validate';
+import { useSelector, useDispatch } from 'react-redux';
+import { login } from '../actions';
 
 function Login() {
   const { handleChange, handleSubmit, values, errors } = UseForm(
     submit,
     Validate
   );
-  let logInValue = useContext(loginContext);
+  const isLoggedIn = useSelector(state => state.isLoggedIn)
+  const dispatch = useDispatch();
 
   function handleKeyPress(e) {
     if (e.keyCode === 13) {
       handleSubmit();
     }
   }
-  async function submit() {
-    logInValue.changeLogin(true);
+  function submit() {
+    dispatch(login());
     console.log("Submitted Successfully");
   }
   return (

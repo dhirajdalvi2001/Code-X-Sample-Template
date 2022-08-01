@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { loginContext } from '../App';
+import { login } from '../actions';
 import UseForm from './UseForm';
 import Validate from './Validate';
 
@@ -9,7 +10,8 @@ function SignUp() {
     submit,
     Validate
   );
-  let logInValue = useContext(loginContext);
+  const isLoggedIn = useSelector(state => state.isLoggedIn)
+  const dispatch = useDispatch();
 
   function handleKeyPress(e) {
     if (e.keyCode === 13) {
@@ -17,7 +19,7 @@ function SignUp() {
     }
   }
   async function submit() {
-    logInValue.changeLogin(true);
+    dispatch(login());
     console.log("Submitted Successfully");
   }
   return (
