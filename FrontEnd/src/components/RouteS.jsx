@@ -11,8 +11,8 @@ function RouteS() {
   return (
         <Routes>
           <Route exact path="/" element={isLoggedIn ? <Body /> : <Login />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/sign-up" element={<SignUp />} />
+          <Route exact path="/login" element={isLoggedIn ? <Navigate to="/" /> : <Login />} />
+          <Route exact path="/sign-up" element={isLoggedIn ? <Navigate to="/" /> : <SignUp />} />
           <Route exact path="*" element={<My404Component />} />
         </Routes>
   )
