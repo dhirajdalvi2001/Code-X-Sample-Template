@@ -185,6 +185,20 @@ body {
 .chat-box {
     width: 70vw;
     border: $border;
+
+    #{&}_bottom {
+        @include flexCenter(row);
+        margin: auto;
+        width: 94%;
+    }
+
+    #{&}_bottom-user {
+        width: 14%;
+    }
+
+    #{&}_bottom-user-select {
+        width: 14%;
+    }
 }
 
 .online-contacts {

@@ -171,6 +171,20 @@ body {
   width: 70vw;
   border: 1px solid #272727;
 }
+.chat-box .chat-box_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  width: 94%;
+}
+.chat-box .chat-box_bottom-user {
+  width: 14%;
+}
+.chat-box .chat-box_bottom-user-select {
+  width: 14%;
+}
 
 .online-contacts {
   width: 10vw;
