@@ -6,11 +6,6 @@ import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// STORE - GLOBALIZED STATE 
-// ACTION 
-// REDUCER 
-// DISPATCH 
-
 const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,3 +18,4 @@ root.render(
 );
 
 reportWebVitals();
+
