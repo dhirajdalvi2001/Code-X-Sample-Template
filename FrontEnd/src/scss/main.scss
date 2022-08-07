@@ -28,7 +28,6 @@ body {
     font-size: 34px;
     font-weight: weight(xbold);
     letter-spacing: 8px;
-    border: $border;
   }
 }
 
@@ -199,21 +198,30 @@ body {
 .chat-box {
   width: 70vw;
   max-height: max-content;
-  border: $border;
   background-color: $primary-colour;
+
+  #{&}_top {
+    height: 88%;
+  }
 
   #{&}_bottom {
     @include flexCenter(row);
     margin: auto;
     width: 94%;
-  }
+    height: 34px;
 
-  #{&}_bottom-user {
-    width: 14%;
-  }
-
-  #{&}_bottom-user-select {
-    width: 14%;
+    .message-box {
+      resize: none;
+      box-sizing: border-box;
+      height: 40px;
+      width: 96%;
+      border: 2px solid $cyan;
+      border-radius: $border-radius;
+      text-indent: 20px;
+      background-color: $secondary-colour;
+      color: $light;
+      outline: none;
+    }
   }
 }
 

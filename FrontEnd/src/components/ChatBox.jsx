@@ -18,9 +18,13 @@ function ChatBox() {
   return (
     <div className="chat-box">
       {listOfMessages}
+      <div className="chat-box_top"></div>
       <div className="chat-box_bottom">
-        <div className="chat-box_bottom-user"></div>
-        <div className="chat-box_bottom-message"></div>
+        <input
+          type="text"
+          placeholder="Type your message here"
+          className="message-box"
+        />
       </div>
     </div>
   );
