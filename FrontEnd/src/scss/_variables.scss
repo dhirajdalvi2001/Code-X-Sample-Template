@@ -1,21 +1,24 @@
 // Colors
+$primary-colour: #222831;
+$secondary-colour: #393e46;
+$cyan: #00adb5;
 $dark: #272727;
 $light-dark: #373737;
 $light: #ccc;
 $white: #fff;
 $red: #f66;
 $text-color: #aaa;
-$primary-colour: #272727;
 
 // Font Weights
 $font-weights: (
-    "regular": 400,
-    "medium": 500,
-    "bold": 700,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "xbold": 900,
 );
 
 // Borders
-$border: 1px solid $dark;   
+$border: 1px solid $primary-colour;
 $border-radius: 8px;
 
 // Text Indent

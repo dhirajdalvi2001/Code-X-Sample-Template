@@ -1,225 +1,244 @@
-@import './globals';
-@import './variables';
+@import "./globals";
+@import "./variables";
 
 @function weight($weight-name) {
-    @return map-get($font-weights, $weight-name)
-};
+  @return map-get($font-weights, $weight-name);
+}
 
 @mixin flexCenter($direction) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
 
 body {
-    background-color: $dark;
+  background-color: $primary-colour;
 }
 
 .navbar {
-    margin: 0 0 0 3vw;
-    height: 6vh;
-    color: $text-color;
+  margin: 0 0 0 3vw;
+  height: 6vh;
+  color: $text-color;
+
+  .logo {
+    @include flexCenter(row);
+    width: 20%;
+    color: $cyan;
+    font-size: 34px;
+    font-weight: weight(xbold);
+    letter-spacing: 8px;
+    border: $border;
+  }
 }
 
 .login {
+  @include flexCenter(column);
+  margin: 100px auto;
+  width: 500px;
+  height: 550px;
+  color: $text-color;
+  background-color: $secondary-colour;
+  border-radius: $border-radius;
+
+  h1 {
+    margin: 20px 0;
+  }
+
+  h6 {
+    width: 95%;
+    text-align: start;
+    height: 0;
+    color: $red;
+    font-size: 10px;
+    font-weight: weight(medium);
+    letter-spacing: 2px;
+    word-spacing: 3px;
+  }
+
+  #{&}_form {
     @include flexCenter(column);
-    margin: 100px auto;
-    width: 500px;
-    height: 550px;
-    color: $text-color;
-    background-color: $light-dark;
+    margin: 0 auto;
+    width: 300px;
+    input {
+      margin: 30px 0 5px;
+      width: 100%;
+      height: 50px;
+      border: $border;
+      border-radius: $border-radius;
+      background-color: $primary-colour;
+      color: $light;
+      text-indent: $text-indent;
+      caret-color: $light;
+      font-weight: weight(medium);
+      outline: none;
+    }
+  }
+
+  #{&}_button {
+    margin: 30px 0 20px;
+    width: 200px;
+    height: 40px;
+    border: $border;
     border-radius: $border-radius;
-
-    h1 {
-        margin: 20px 0;
+    background-color: $light;
+    font-weight: weight(bold);
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $primary-colour;
+      color: $light;
+      transition: 0.3s all;
     }
+  }
 
-    h6 {
-        width: 95%;
-        text-align: start;
-        height: 0;
-        color: $red;
-        font-size: 10px;
-        font-weight: weight(medium);
-        letter-spacing: 2px;
-        word-spacing: 3px;
-    }
+  #{&}_h3 {
+    font-weight: weight(regular);
+    font-size: 14px;
+    background-color: $primary-colour;
+  }
 
-    #{&}_form {
-        @include flexCenter(column);
-        margin: 0 auto;
-        width: 300px;
-        input {
-            margin: 30px 0 5px;
-            width: 100%;
-            height: 50px;
-            border: $border;
-            border-radius: $border-radius;
-            background-color: $dark;
-            color: $light;
-            text-indent: $text-indent;
-            caret-color: $light;
-            font-weight: weight(medium);
-            outline: none;
-        }
+  #{&}_link {
+    color: $white;
+    text-decoration: none;
+    font-weight: weight(medium);
+    &:hover {
+      color: $light;
+      transition: 0.3s all;
     }
-
-    #{&}_button {
-        margin: 30px 0 20px;
-        width: 200px;
-        height: 40px;
-        border: $border;
-        border-radius: $border-radius;
-        background-color: $light;
-        font-weight: weight(bold);
-        outline: none;
-        cursor: pointer;
-        &:hover {
-            background-color: $dark;
-            color: $light;
-            transition: 0.3s all;
-        }
-    }
-
-    #{&}_h3 {
-        font-weight: weight(regular);
-        font-size: 14px;
-        background-color: $dark;
-    }
-
-    #{&}_link {
-        color: $white;
-        text-decoration: none;
-        font-weight: weight(medium);
-        &:hover {
-            color: $light;
-            transition: 0.3s all;
-        }
-    }
+  }
 }
 
 .body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 3vw;
+  background-color: $primary-colour;
+  color: $text-color;
+  width: auto;
+  height: 93vh;
+  max-height: max-content;
+  border-radius: 12px 0 0 0;
+  overflow: hidden;
+  font-weight: weight(medium);
+
+  #{&}_navbar {
     display: flex;
-    flex-direction: column;
-    margin: 0 0 0 3vw;
-    background-color: $light-dark;
-    color: $text-color;
-    width: auto;
-    height: 93vh;
-    max-height: max-content;
-    border-radius: 12px 0 0 0;
-    overflow: hidden;
-    font-weight: weight(medium);
+    height: 50px;
+    background-color: lighten($secondary-colour, 4%);
+  }
 
-    #{&}_navbar {
-        display: flex;
-        height: 50px;
-        background-color: lighten($light-dark, 4%);
-    }
+  #{&}_navbar_left {
+    width: 20vw;
+    border: $border;
+  }
 
-    #{&}_navbar_left {
-        width: 20vw;
-        border: $border;
-    }
+  #{&}_navbar_middle {
+    width: 70vw;
+    border: $border;
+  }
 
-    #{&}_navbar_middle {
-        width: 70vw;
-        border: $border;
-    }
+  #{&}_navbar_right {
+    width: 10vw;
+    border: $border;
+  }
 
-    #{&}_navbar_right {
-        width: 10vw;
-        border: $border;
-    }
+  #{&}_container {
+    display: flex;
+    height: 100%;
+  }
 
-    #{&}_container {
-        display: flex;
-        height: 100%;
-    }
+  #{&}_navbar_search-logo {
+    position: absolute;
+    margin: 16px 0 0 20px;
+    color: $primary-colour;
+  }
 
-    #{&}_navbar_search-logo {
-        position: absolute;
-        margin: 16px 0 0 20px;
-        color: $dark;
-    }
-
-    #{&}_navbar_search-box {
-        display: flex;
-        margin: 10px auto;
-        height: 30px;
-        width: 90%;
-        outline: none;
-        background-color: $text-color;
-        border: $border;
-        border-radius: $border-radius;
-        text-indent: $text-indent;
-        caret-color: $dark;
-    }
+  #{&}_navbar_search-box {
+    display: flex;
+    margin: 10px auto;
+    height: 30px;
+    width: 90%;
+    outline: none;
+    background-color: $text-color;
+    border: $border;
+    border-radius: $border-radius;
+    text-indent: $text-indent;
+    caret-color: $primary-colour;
+  }
 }
 
 .recent-contacts {
-    display: flex;
-    width: 20vw;
+  display: flex;
+  width: 20vw;
+  height: 98%;
+  max-height: max-content;
+  background-color: $secondary-colour;
+  border: $border;
+  border-radius: 0 0 0 $border-radius;
+
+  #{&}_search-box {
+    margin: 10px auto;
+    height: 30px;
+    width: 90%;
+    outline: none;
+    background-color: $text-color;
     border: $border;
+    border-radius: $border-radius;
+    text-indent: $text-indent;
+    caret-color: $primary-colour;
+  }
 
-    #{&}_search-box {
-        margin: 10px auto;
-        height: 30px;
-        width: 90%;
-        outline: none;
-        background-color: $text-color;
-        border: $border;
-        border-radius: $border-radius;
-        text-indent: $text-indent;
-        caret-color: $dark;
-    }
-
-    #{&}_search-logo {
-        position: absolute;
-        margin: 16px 0 0 20px;
-        color: $dark;
-    }
+  #{&}_search-logo {
+    position: absolute;
+    margin: 16px 0 0 20px;
+    color: $primary-colour;
+  }
 }
 
 .chat-box {
-    width: 70vw;
-    border: $border;
+  width: 70vw;
+  max-height: max-content;
+  border: $border;
+  background-color: $primary-colour;
 
-    #{&}_bottom {
-        @include flexCenter(row);
-        margin: auto;
-        width: 94%;
-    }
+  #{&}_bottom {
+    @include flexCenter(row);
+    margin: auto;
+    width: 94%;
+  }
 
-    #{&}_bottom-user {
-        width: 14%;
-    }
+  #{&}_bottom-user {
+    width: 14%;
+  }
 
-    #{&}_bottom-user-select {
-        width: 14%;
-    }
+  #{&}_bottom-user-select {
+    width: 14%;
+  }
 }
 
 .online-contacts {
-    width: 10vw;
-    border: $border;
+  width: 10vw;
+  height: 98%;
+  max-height: max-content;
+  background-color: $secondary-colour;
+  border: $border;
 }
 // My 404 Component
 .My404 {
-    @include flexCenter(column);
-    margin: 200px auto;
-    color: $light;
-    font-size: 20px;
-    font-weight: weight(bold);
+  @include flexCenter(column);
+  margin: 200px auto;
+  color: $light;
+  font-size: 20px;
+  font-weight: weight(bold);
 
-    #{&}_LinkTo {
-        margin: 50px auto;
-        text-decoration: underline;
-        color: $light;
-        &:hover {
-            color: $light-dark;
-            transition: 0.3s all;
-        }
+  #{&}_LinkTo {
+    margin: 50px auto;
+    text-decoration: underline;
+    color: $light;
+    &:hover {
+      color: $secondary-colour;
+      transition: 0.3s all;
     }
+  }
 }
