@@ -201,7 +201,7 @@ body {
   background-color: $primary-colour;
 
   #{&}_top {
-    height: 88%;
+    height: 86%;
   }
 
   #{&}_bottom {
@@ -214,14 +214,114 @@ body {
       resize: none;
       box-sizing: border-box;
       height: 40px;
-      width: 96%;
+      width: 100%;
       border: 2px solid $cyan;
       border-radius: $border-radius;
-      text-indent: 20px;
+      text-indent: $text-indent;
       background-color: $secondary-colour;
       color: $light;
       outline: none;
     }
+  }
+}
+
+.chat-message {
+  @include flexCenter(row);
+  background-color: lighten($primary-colour, 1);
+  margin: 20px auto;
+  width: 96%;
+  min-height: 140px;
+  height: 150px;
+  max-height: max-content;
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $secondary-colour;
+    color: $light;
+  }
+
+  #{&}_left {
+    @include flexCenter(column);
+    width: 16%;
+
+    .profile-pic {
+      margin: 4px;
+      width: 70px;
+      border-radius: $border-radius;
+    }
+
+    button {
+      margin: 4px auto;
+      width: 80px;
+      height: 30px;
+      background-color: $primary-colour;
+      color: $light;
+      border: 0;
+      border-radius: $border-radius;
+    }
+  }
+
+  #{&}_right {
+    @include flexCenter(row);
+    width: 84%;
+    height: 100%;
+  }
+
+  #{&}_username {
+    min-width: 100px;
+    width: max-content;
+  }
+}
+
+.chat-message {
+  @include flexCenter(row);
+  background-color: lighten($primary-colour, 1);
+  margin: 20px auto;
+  width: 96%;
+  min-height: 140px;
+  height: max-content;
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $secondary-colour;
+    color: $light;
+  }
+
+  #{&}_left {
+    @include flexCenter(column);
+    width: 16%;
+
+    .profile-pic {
+      margin: 4px;
+      width: 70px;
+      border-radius: $border-radius;
+    }
+
+    button {
+      margin: 4px auto;
+      width: 80px;
+      height: 30px;
+      background-color: $secondary-colour;
+      color: $light;
+      border: 0;
+      border-radius: $border-radius;
+      cursor: pointer;
+    }
+  }
+
+  #{&}_right {
+    @include flexCenter(column);
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 84%;
+  }
+
+  #{&}_username {
+    margin: 8px;
+    min-width: 100px;
+    width: max-content;
   }
 }
 

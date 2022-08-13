@@ -192,7 +192,7 @@ body {
   background-color: #222831;
 }
 .chat-box .chat-box_top {
-  height: 88%;
+  height: 86%;
 }
 .chat-box .chat-box_bottom {
   display: flex;
@@ -207,13 +207,129 @@ body {
   resize: none;
   box-sizing: border-box;
   height: 40px;
-  width: 96%;
+  width: 100%;
   border: 2px solid #00adb5;
   border-radius: 8px;
-  text-indent: 20px;
+  text-indent: 24px;
   background-color: #393e46;
   color: #ccc;
   outline: none;
+}
+
+.chat-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #242a34;
+  margin: 20px auto;
+  width: 96%;
+  min-height: 140px;
+  height: 150px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.chat-message:hover {
+  background-color: #393e46;
+  color: #ccc;
+}
+.chat-message .chat-message_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 16%;
+}
+.chat-message .chat-message_left .profile-pic {
+  margin: 4px;
+  width: 70px;
+  border-radius: 8px;
+}
+.chat-message .chat-message_left button {
+  margin: 4px auto;
+  width: 80px;
+  height: 30px;
+  background-color: #222831;
+  color: #ccc;
+  border: 0;
+  border-radius: 8px;
+}
+.chat-message .chat-message_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 84%;
+  height: 100%;
+}
+.chat-message .chat-message_username {
+  min-width: 100px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.chat-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #242a34;
+  margin: 20px auto;
+  width: 96%;
+  min-height: 140px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.chat-message:hover {
+  background-color: #393e46;
+  color: #ccc;
+}
+.chat-message .chat-message_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 16%;
+}
+.chat-message .chat-message_left .profile-pic {
+  margin: 4px;
+  width: 70px;
+  border-radius: 8px;
+}
+.chat-message .chat-message_left button {
+  margin: 4px auto;
+  width: 80px;
+  height: 30px;
+  background-color: #393e46;
+  color: #ccc;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.chat-message .chat-message_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 84%;
+}
+.chat-message .chat-message_username {
+  margin: 8px;
+  min-width: 100px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .online-contacts {
