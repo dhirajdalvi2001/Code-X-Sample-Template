@@ -29,8 +29,8 @@ function ChatBox() {
           placeholder="Type your message here"
           className="message-box"
         />
-        <div className="send-button">
-          <BiSend />
+        <div className="chat-box_send-button">
+          <BiSend size={30} />
         </div>
       </div>
     </div>

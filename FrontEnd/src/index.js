@@ -4,20 +4,20 @@ import { createStore } from "redux";
 import allReducers from "./reducers";
 import { Provider } from "react-redux";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 
 const store = createStore(
-  allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    allReducers,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+root.render( <
+    React.StrictMode >
+    <
+    Provider store = { store } >
+    <
+    App / >
+    <
+    /Provider> < /
+    React.StrictMode >
 );
-
-reportWebVitals();
