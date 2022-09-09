@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
-import axios from 'axios'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function RecentContacts() {
+  const [chats, setChats] = useState([]);
+
   const fetchChats = async () => {
-    const data = await axios.get('/api/chat/').catch((error) => {
+    const data = await axios.get("/api/chat/").catch((error) => {
       if (error.response) {
         // The request was made and the server responded with a status code
         // that falls out of the range of 2xx
@@ -19,19 +21,26 @@ function RecentContacts() {
         console.log(error.request);
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error', error.message);
+        console.log("Error", error.message);
       }
       console.log(error.config);
     });
-    console.log(data);
+    setChats(data.data);
   };
+
   useEffect(() => {
     fetchChats();
-  }, []) 
+  }, []);
+
   return (
-    <div className='recent-contacts'>
+    <div className="recent-contacts">
+      {chats.map((e) => (
+        <div className="recent-contacts_chatName" key={e._id}>
+          {e.chatName}
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
-export default RecentContacts
+export default RecentContacts;
