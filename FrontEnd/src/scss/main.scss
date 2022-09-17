@@ -114,10 +114,11 @@ body {
     font-weight: weight(medium);
     #{&}_navbar {
         display: flex;
-        height: 50px;
+        height: 36px;
         background-color: lighten($secondary-colour, 4%);
     }
     #{&}_navbar_left {
+        @include flexCenter(row);
         width: 20vw;
         border: $border;
     }
@@ -134,20 +135,27 @@ body {
         height: 100%;
     }
     #{&}_navbar_search-logo {
-        position: absolute;
-        margin: 16px 0 0 20px;
+        margin: 2px;
+        min-width: 20px;
         color: $primary-colour;
     }
-    #{&}_navbar_search-box {
-        display: flex;
-        margin: 10px auto;
-        height: 30px;
+    #{&}_navbar_left_searchBox {
+        @include flexCenter(row);
         width: 90%;
-        outline: none;
-        background-color: $text-color;
+        height: 26px;
         border: $border;
         border-radius: $border-radius;
-        text-indent: $text-indent;
+        background-color: $text-color;
+    }
+    #{&}_navbar_search-input {
+        margin: auto;
+        height: 25px;
+        min-width: 100%;
+        width: 30%;
+        outline: none;
+        background-color: $text-color;
+        border: 0;
+        border-radius: $border-radius;
         caret-color: $primary-colour;
     }
 }

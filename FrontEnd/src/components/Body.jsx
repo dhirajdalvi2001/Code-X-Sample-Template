@@ -38,7 +38,7 @@ function Body() {
     fetchChats();
   }, []);
 
-  const handleSearchValue = () => {
+  const handleSearchValue = (e) => {
     console.log(e);
   };
 
@@ -65,14 +65,16 @@ function Body() {
       <div className="body">
         <div className="body_navbar">
           <div className="body_navbar_left">
-            <FiSearch className="body_navbar_search-logo" />
-            <form onKeyPress={handleSearch}>
-              <input
-                className="body_navbar_search-box"
-                type="text"
-                placeholder="Search contact or chat"
-              />
-            </form>
+            <div className="body_navbar_left_searchBox">
+              <FiSearch className="body_navbar_search-logo" />
+              <form onKeyPress={handleSearch}>
+                <input
+                  className="body_navbar_search-input"
+                  type="text"
+                  placeholder="Search contact or chat"
+                />
+              </form>
+            </div>
           </div>
           <div className="body_navbar_middle">Contact Name</div>
           <div className="body_navbar_right">10</div>
