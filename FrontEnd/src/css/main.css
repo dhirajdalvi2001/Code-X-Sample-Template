@@ -127,6 +127,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  min-width: 240px;
   width: 20vw;
   border: 1px solid #373737;
 }
@@ -162,7 +163,7 @@ body {
   margin: auto;
   height: 25px;
   min-width: 100%;
-  width: 30%;
+  width: 200px;
   outline: none;
   background-color: #aaa;
   border: 0;
@@ -176,6 +177,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
+  min-width: 240px;
   width: 20vw;
   height: 100%;
   max-height: -webkit-max-content;
