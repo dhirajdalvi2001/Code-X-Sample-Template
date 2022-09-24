@@ -21,6 +21,7 @@ body {
     color: $text-color;
     .logo {
         @include flexCenter(row);
+        cursor: pointer;
         width: 20%;
         color: $cyan;
         font-size: 34px;

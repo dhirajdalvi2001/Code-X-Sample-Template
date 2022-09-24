@@ -18,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  cursor: pointer;
   width: 20%;
   color: #00adb5;
   font-size: 34px;
