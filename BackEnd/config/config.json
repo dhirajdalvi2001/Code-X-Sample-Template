@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "dhirajdalvi2001",
+        "password": null,
+        "database": "codex_database",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "dhirajdalvi2001",
+        "password": null,
+        "database": "codex_database",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "dhirajdalvi2001",
+        "password": null,
+        "database": "codex_database",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    }
+}
