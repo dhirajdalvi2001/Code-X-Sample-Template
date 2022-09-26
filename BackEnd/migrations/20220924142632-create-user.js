@@ -8,14 +8,16 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            firstName: {
-                type: Sequelize.STRING
-            },
-            lastName: {
-                type: Sequelize.STRING
-            },
             email: {
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
+                allowNull: false,
+            },
+            password: {
+                type: DataTypes.STRING,
+                allowNull: false,
+            },
+            username: {
+                type: DataTypes.STRING,
                 allowNull: false,
             },
             createdAt: {
@@ -25,7 +27,33 @@ module.exports = {
             updatedAt: {
                 allowNull: false,
                 type: Sequelize.DATE
-            }
+            },
+            avtar: {
+                type: DataTypes.STRING,
+            },
+            tags: {
+                type: DataTypes.TEXT,
+            },
+            social: {
+                github: {
+                    type: DataTypes.STRING,
+                },
+                stackoverflow: {
+                    type: DataTypes.STRING,
+                },
+                linkedin: {
+                    type: DataTypes.STRING,
+                },
+                instagram: {
+                    type: DataTypes.STRING,
+                },
+                twitter: {
+                    type: DataTypes.STRING,
+                },
+                facebook: {
+                    type: DataTypes.STRING,
+                },
+            },
         });
     },
     async down(queryInterface, Sequelize) {
